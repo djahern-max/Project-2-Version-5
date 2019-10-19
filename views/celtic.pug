@@ -1,0 +1,27 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name
+    else 
+        h1.greeting Celtic Mythology
+            a.button_nav(href="/chinese") Proceed to Module # 3 
+
+append links 
+    li(style="float: right;")
+        a(href="/logout") logout 
+
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            br
+            p.text About Celtic Mythology
+            br
+            p Celtic mythology is the mythology of Celtic polytheism, the religion of the Iron Age Celts.[1] Like other Iron Age Europeans, the early Celts maintained a polytheistic mythology and religious structure. For Celts in close contact with Ancient Rome, such as the Gauls and Celtiberians, their mythology did not survive the Roman Empire, their subsequent conversion to Christianity and the loss of their Celtic languages. It is mostly through contemporary Roman and Christian sources that their mythology has been preserved. The Celtic peoples who maintained either political or linguistic identities (such as the Gaels in Ireland and Scotland, the Welsh in Wales, and the Celtic Britons of southern Great Britain and Brittany) left vestigial remnants of their ancestral mythologies that were put into written form during the Middle Ages.
+            br
+            p.text Ana or Danu/Dana  – The Primordial Goddess of Nature
+            br
+            p Counted among the oldest of the ancient Celtic gods in Ireland, Ana (also known as Anu, Dana, Danu, and Annan) possibly embodied the primordial scope, with her epithets describing her as a mother goddess. Thus the Celtic goddess, often portrayed as a beautiful and mature woman, was associated with nature and the spiritual essence of nature, while also representing the contrasting (yet cyclic) aspects of prosperity, wisdom, death, and regeneration.
+            img.center(src="/img/ana_or_danu_ThePrimordalGoddessofNature.jpg", alt="Tezcatlipoca – The Smoking Mirror") 

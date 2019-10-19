@@ -1,0 +1,27 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+    else 
+        h1.greeting Aztec Mythology
+            a.button_nav(href="/quiz") Proceed to Examination
+
+append links 
+    li(style="float: right;")
+        a(href="/logout") logout 
+
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            br
+            p.text About Aztec Mythology
+            br
+            p Aztec mythology is the body or collection of myths of Aztec civilization of Central Mexico.[1] The Aztecs were Nahuatl-speaking groups living in central Mexico and much of their mythology is similar to that of other Mesoamerican cultures. According to legend, the various groups who were to become the Aztecs arrived from the north into the Anahuac valley around Lake Texcoco. The location of this valley and lake of destination is clear – it is the heart of modern Mexico City – but little can be known with certainty about the origin of the Aztec. There are different accounts of their origin. In the myth the ancestors of the Mexica/Aztec came from a place in the north called Aztlan, the last of seven nahuatlacas (Nahuatl-speaking tribes, from tlaca, "man") to make the journey southward, hence their name "Azteca." Other accounts cite their origin in Chicomoztoc, "the place of the seven caves," or at Tamoanchan (the legendary origin of all civilizations).
+            br
+            p.text Tezcatlipoca – The Smoking Mirror
+            br
+            p The lord of the nocturnal sky and the eternal antithesis of his brother Quetzalcóatl, Tezcatlipoca, among the major Aztec gods and goddesses, is also sometimes credited as being the co-creator of the world. Pertaining to this role, according to one version of the mythical narrative, Tezcatlipoca sacrificed his own limb when he baited it for the female serpent monster Cipactli. And thus he was given the honorific title of Ipalnemoani – ‘he by whom we live’. 
+            img.center(src="/img/Tezcatlipoca.jpg", alt="Tezcatlipoca – The Smoking Mirror") 

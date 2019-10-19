@@ -1,0 +1,27 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+            a.button_nav(href="/greek") Enter Module # 1
+    else 
+        h1.greeting Welcome 
+            span=name 
+            |  to our website
+
+append links 
+    li(style="float: right;")
+        a(href="/logout") logout 
+
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+
+            br
+            br
+            h3.text_center Welcome to Mythendium!  Please proceed through the modules and complete examination at the end.
+            br
+            br
+            img.center(src="/img/MythendiumLogo_1_70.jpg", alt="Mythendium Logo") 

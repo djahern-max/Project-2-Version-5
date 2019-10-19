@@ -1,0 +1,29 @@
+extends layout
+
+mixin message(opp, name)
+    if(opp)
+        h1.greeting Logged in as 
+            span=name 
+    else 
+        h1.greeting Egyptian Mythology
+            a.button_nav(href="/norse") Proceed to Module # 5
+
+append links 
+    li(style="float: right;")
+        a(href="/logout") logout 
+
+block content
+    .dashboard 
+        .user 
+            +message(opp, name)
+            br
+            p.text About Egyptian Mythology
+            br
+            p Egyptian mythology is the collection of myths from ancient Egypt, which describe the actions of the Egyptian gods as a means of understanding the world around them. The beliefs that these myths express are an important part of ancient Egyptian religion. Myths appear frequently in Egyptian writings and art, particularly in short stories and in religious material such as hymns, ritual texts, funerary texts, and temple decoration. These sources rarely contain a complete account of a myth and often describe only brief fragments.
+            br
+            p.text Osiris
+            br
+            p Osiris is the Egyptian Lord of the Underworld and Judge of the Dead, brother-husband to Isis, and one of the most important gods of ancient Egypt. The name `Osiris' is the Latinized form of the Egyptian Usir which is interpreted as 'powerful' or 'mighty'.
+            img.center(src="/img/osiris.jpg", alt="Osiris") 
+
+        
