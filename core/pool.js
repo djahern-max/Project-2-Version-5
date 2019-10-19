@@ -23,6 +23,6 @@ if (process.env.JAWSDB_URL) {
         return;
     });
 
+    pool.query = util.promisify(pool.query);
+    module.exports = pool;
 }
-pool.query = util.promisify(pool.query);
-module.exports = pool;
